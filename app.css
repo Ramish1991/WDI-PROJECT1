@@ -1,32 +1,15 @@
-body {
-	/*background-image: url("http://orig15.deviantart.net/5810/f/2015/141/f/7/colorful_backgrounds_00394612_by_shinyrai-d8u71c5.jpg");*/
-	text-align: center;
+#Box1	{
+	background-color: #F0FFF0
 }
 
->>>>>>>>>>>>>>>>>>>>>>>
-h1 {
-	color: black;
+#Box2	{
+	background-color: #FAEBD7
 }
 
->>>>>>>>>>>>>>>>>>>>>>>
-.Container {
-	color: orange;
-	font-size: 50px;
-	position: center;
+#Box3	{
+	background-color: #BDB76B
 }
 
->>>>>>>>>>>>>>>>>>>>>>>
-
-li {
-	display: inline-block;
-}
-
-
->>>>>>>>>>>>>>>>>>>>>>>
-
-#Logo {
-	height: 15px;
-	width: 15px;
-	position: center;
-	padding: 10px;
+#Box4	{
+	background-color: #FFE4B5
 }
