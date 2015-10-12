@@ -13,4 +13,9 @@ h1 {
 	position: center;
 }
 
-
+div {
+display: inline-block;
+width: 70px;
+height: 25px;
+margin: 20px auto;
+}
