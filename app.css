@@ -1,15 +1,21 @@
+td {
+	height: 100px;
+	width: 100px;
+}
+
 #Box1	{
-	background-color: #F0FFF0
+	background-color: #F0FFF0;
 }
 
 #Box2	{
-	background-color: #FAEBD7
+	background-color: #FAEBD7;
 }
 
 #Box3	{
-	background-color: #BDB76B
+	background-color: #BDB76B;
 }
 
 #Box4	{
-	background-color: #FFE4B5
+	background-color: #FFE4B5;
 }
+
