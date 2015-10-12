@@ -2,6 +2,6 @@ $(function(){
 
 });
 
-Line = create.object("hover", function(){
+// Line = create.object("hover", function(){
 	
-});
+// });

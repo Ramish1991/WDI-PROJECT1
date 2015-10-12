@@ -3,16 +3,30 @@ body {
 	text-align: center;
 }
 
+>>>>>>>>>>>>>>>>>>>>>>>
 h1 {
 	color: black;
 }
 
+>>>>>>>>>>>>>>>>>>>>>>>
 .Container {
-	color: black;
+	color: orange;
 	font-size: 50px;
 	position: center;
 }
 
-#Line1 {
+>>>>>>>>>>>>>>>>>>>>>>>
+
+li {
 	display: inline-block;
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+#Logo {
+	height: 15px;
+	width: 15px;
+	position: center;
+	padding: 10px;
 }
