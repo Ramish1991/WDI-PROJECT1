@@ -1,21 +1,18 @@
 body {
-	background-image: url("http://orig15.deviantart.net/5810/f/2015/141/f/7/colorful_backgrounds_00394612_by_shinyrai-d8u71c5.jpg");
+	/*background-image: url("http://orig15.deviantart.net/5810/f/2015/141/f/7/colorful_backgrounds_00394612_by_shinyrai-d8u71c5.jpg");*/
 	text-align: center;
 }
 
 h1 {
-	color: white;
+	color: black;
 }
 
-.container {
-	color: white;
-	font-size: 100px;
+.Container {
+	color: black;
+	font-size: 50px;
 	position: center;
 }
 
-div {
-display: inline-block;
-width: 70px;
-height: 25px;
-margin: 20px auto;
+#Line1 {
+	display: inline-block;
 }
