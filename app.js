@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-
-
 	function hideAllBoxes() {
 
 		var allBoxes = $(".box");
@@ -16,7 +14,37 @@ $(document).ready(function() {
 		}
 	};
 
+// Execute hideAllBoxes
 	hideAllBoxes();
+
+	// Shuffling cells added from net
+	
+	shuffle($("table tbody"));
+	    function shuffle(tbl) {
+	        var arr = tbl.find("td");
+	        for(
+	          var j, x, i = arr.length; i;
+	          j = parseInt(Math.random() * i),
+	          x = arr[--i], arr[i] = arr[j], arr[j] = x
+	        );
+
+	        var tmp;
+	        var rows = tbl.find("tr").length
+
+	        var cols = tbl.find("tr:first td").length
+
+	        for (i = 0; i < rows; i++){
+	            tmp = tbl.find("tr").eq(i);
+	            tmp.html()
+	            for (j = 0; j < cols; j++)
+	                tmp.append(arr[i*cols+j]);
+
+$(console.log())
+	        }       
+	  }
+
+
+
 
 	$(".box").on("click", function(){
 
@@ -31,11 +59,8 @@ $(document).ready(function() {
 
 
 
-	// to create the sequence showing different boxes, 
-	// need to use setInterval and then store the ID of the boxes shown in an array to save the order, and compare to the user choice 
-
-	
-
+// need to grab all cells and randomize the order before showing them
+// then store the ID of the boxes shown in an array to save the order, and compare to the user choice 
 	
 });
 		// $(box).on(click. function(){
@@ -47,8 +72,6 @@ $(document).ready(function() {
 // $(function showRandomBoxes() {
 // 	$(box).show.math.random()
 // });
-
-
 
 
 	// $(boxWhichWasClicked).animate({"background-color", "blue"});
