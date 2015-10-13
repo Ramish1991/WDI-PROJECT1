@@ -3,14 +3,22 @@ $(document).ready(function() {
 //Make Player1 Choose boxes.
 function playerOnesPiks() {
 // counter meant to allow 4 picks for Player1
-var playersSelect = 1
+var counter = 1
 for (var i = 0; i < 4; i++) {
+	// from below
+	var cells = $("td:not(.selected)")
+
+	var playerOnesArrayChoices = []
+
+	playerOnesArrayChoices.push("playerOneChoice");
 // on clicking, player will define his piks with cell1 / cell2 / cell3 / cell4
 var playerOneChoice = $("td").on("click", function(){
-	addClass("cell" + playersSelect);
-	playersSelect++
+	addClass("cell" + counter);
+	counter++
 
 	var cells = $("td:(.playersSelect)")
+	var currentCell = $(cells[counter])
+	currentCell.addClass("cell" + counter)
 })
 
 }}
@@ -19,18 +27,18 @@ playerOnesPiks();
 console.log("playerOneChoice")
 });
 
-// function pickCells() {
+//+ function pickCells() {
 
-// 	var counter = 1
+//+ 	var counter = 1
 
-// 	for (var i = 0; i < 4; i++) {
+//+ 	for (var i = 0; i < 4; i++) {
 
-// 		setTimeout(function() {
+//- 		setTimeout(function() {
 
-// 			var cells = $("td:not(.selected)")
-// 			var randomIndex = Math.floor(Math.random() * (cells.length-1))
+//+ 			var cells = $("td:not(.selected)")
+//- 			var randomIndex = Math.floor(Math.random() * (cells.length-1))
 
-// 			var currentCell = $(cells[randomIndex])
+//+ 			var currentCell = $(cells[randomIndex])
 // 			currentCell.addClass("cell" + counter)
 // 			counter++
 
@@ -42,12 +50,7 @@ console.log("playerOneChoice")
 // 	}, 4000)
 // }
 
-
-
 // pickCells();
-
-
-
 
 // var userSelect = 1;
 
