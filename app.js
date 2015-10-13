@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 
 $(function (){
 	$(".box").on("click", function(){
@@ -38,4 +38,4 @@ $(function hideAllBoxes() {
 
 })
 
-
+});
