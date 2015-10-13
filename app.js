@@ -29,12 +29,17 @@ $(document).ready(function() {
 		for (var i = allBoxes.length - 1; i >= 0; i--) {
 
 			var box = allBoxes[i];
+			$(box).show.Math.random()
 
+}});
+		// $(box).on(click. function(){
+
+		// })
 		// var p = $(box).css("background-color", "yellow");
 		// p.hide;
 
-	}; 
-
-})
+// $(function showRandomBoxes() {
+// 	$(box).show.math.random()
+// });
 
 });
