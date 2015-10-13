@@ -17,22 +17,24 @@ table {
 	display: none;
 }
 
-#box1	{
+.cell1.selected	{
 	background-color: red;
 }
 
-#box2	{
+.cell2.selected	{
 	background-color: purple;
 }
 
-#box3	{
+.cell3.selected	{
 	background-color: green;
 }
 
-#box4	{
+.cell4.selected	{
 	background-color: yellow;
 }
 
-.noColour {
+/*.noColour {
 	background-color: blue;
 }
+
+*/

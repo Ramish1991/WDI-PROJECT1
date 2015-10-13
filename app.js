@@ -1,68 +1,106 @@
 $(document).ready(function() {
 
-	function hideAllBoxes() {
+	// function hideAllBoxes() {
 
-		var allBoxes = $(".box");
+	// 	var allBoxes = $(".box");
 
-		for (var i = 0; i < allBoxes.length; i++) {
+	// 	for (var i = 0; i < allBoxes.length; i++) {
 
-			var box = allBoxes[i];
+	// 		var box = allBoxes[i];
 
-			setTimeout(function(box){
-				$(box).show()
-			}, 1000*i, box);
+	// 		setTimeout(function(box){
+	// 			$(box).show()
+	// 		}, 1000*i, box);
+	// 	}
+	// };
+
+	function pickCells() {
+		
+		var counter = 1
+
+    for (var i = 0; i < 4; i++) {
+
+    	setTimeout(function() {
+
+	    	var cells = $("td:not(.selected)")
+	  		var randomIndex = Math.floor(Math.random() * (cells.length-1))
+
+				var currentCell = $(cells[randomIndex])
+		    currentCell.addClass("cell" + counter)
+		    counter++
+
+		    currentCell.addClass("selected")
+		  }, i * 1000);
+    }
+    setTimeout(function(){
+    	$("td.selected").removeClass("selected")
+    }, 4000)
+  }
+
+	pickCells();
+
+	var userSelect = 1;
+
+	$("td").on("click", function(){
+		var cell = $(this)
+		if(cell.hasClass("cell"+ userSelect)){
+			userSelect++
+			cell.addClass("selected")
+		} else {
+			console.log("End Game")
 		}
-	};
+		// do stuff on click
+
+	});
+});
 
 // Execute hideAllBoxes
-	hideAllBoxes();
+	// hideAllBoxes();
 
 	// Shuffling cells added from net
-	
-	shuffle($("table tbody"));
-	    function shuffle(tbl) {
-	        var arr = tbl.find("td");
-	        for(
-	          var j, x, i = arr.length; i;
-	          j = parseInt(Math.random() * i),
-	          x = arr[--i], arr[i] = arr[j], arr[j] = x
-	        );
+	// shuffle($("table tbody"));
+	//     function shuffle(tbl) {
+	//         var arr = tbl.find("td");
+	//         for(
+	//           var j, x, i = arr.length; i;
+	//           j = parseInt(Math.random() * i),
+	//           x = arr[--i], arr[i] = arr[j], arr[j] = x
+	//         );
 
-	        var tmp;
-	        var rows = tbl.find("tr").length
+	//         var tmp;
+	//         var rows = tbl.find("tr").length
 
-	        var cols = tbl.find("tr:first td").length
+	//         var cols = tbl.find("tr:first td").length
 
-	        for (i = 0; i < rows; i++){
-	            tmp = tbl.find("tr").eq(i);
-	            tmp.html()
-	            for (j = 0; j < cols; j++)
-	                tmp.append(arr[i*cols+j]);
+	//         for (i = 0; i < rows; i++){
+	//             tmp = tbl.find("tr").eq(i);
+	//             tmp.html()
+	//             for (j = 0; j < cols; j++)
+	//                 tmp.append(arr[i*cols+j]);
+	//         }       
+	//   }
 
-$(console.log())
-	        }       
-	  }
-
+// var movingBoxes = [box1, box2, box3, box4]
 
 
 
-	$(".box").on("click", function(){
+// 	$(".box").on("click", function(){
 
-		var boxWhichWasClicked = $(this);
-		console.log(boxWhichWasClicked.attr("id") + ' works!')
+// 		var boxWhichWasClicked = $(this);
+// 		console.log(boxWhichWasClicked.attr("id") + ' works!')
 
-	  boxWhichWasClicked.delay(100).queue(function() {
-			$(boxWhichWasClicked).css("background-color", "white");
-		})
+// 	  boxWhichWasClicked.delay(100).queue(function() {
+// 			$(boxWhichWasClicked).css("background-color", "white");
+// 		})
 
-})
+// })
 
 
 
 // need to grab all cells and randomize the order before showing them
 // then store the ID of the boxes shown in an array to save the order, and compare to the user choice 
 	
-});
+// });
 		// $(box).on(click. function(){
 
 		// })
