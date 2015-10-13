@@ -3,25 +3,21 @@ $(document).ready(function() {
 //Make Player1 Choose boxes.
 function playerOnesPiks() {
 // counter meant to allow 4 picks for Player1
-	var playersSelect = 1
-	for (var i = 0; i < 4; i++) {
+var playersSelect = 1
+for (var i = 0; i < 4; i++) {
 // on clicking, player will define his piks with cell1 / cell2 / cell3 / cell4
-	var playerOneChoice = $("td").on("click", function(){
-		addClass("cell" + playersSelect);
-		playersSelect++
+var playerOneChoice = $("td").on("click", function(){
+	addClass("cell" + playersSelect);
+	playersSelect++
 
-		$("td").on("click", function(){
-			var playerOnesPik = $("td").addClass()
-	}
-
-	)})
-}
-}
-
+	var cells = $("td:(.playersSelect)")
 })
 
+}}
 
-// playerOnesPiks();
+playerOnesPiks();
+console.log("playerOneChoice")
+});
 
 // function pickCells() {
 
