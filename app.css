@@ -1,21 +1,34 @@
 td {
 	height: 100px;
 	width: 100px;
+	border-color: black;
+	border-width: 1px;
+	border: solid;
+}
+
+table {
+	border-color: black;
+	border-width: 1px;
+	border: solid;
+
 }
 
 #Box1	{
-	background-color: #F0FFF0;
+	background-color: red;
 }
 
 #Box2	{
-	background-color: #FAEBD7;
+	background-color: purple;
 }
 
 #Box3	{
-	background-color: #BDB76B;
+	background-color: green;
 }
 
 #Box4	{
-	background-color: #FFE4B5;
+	background-color: yellow;
 }
 
+.noColour {
+	background-color: blue;
+}
