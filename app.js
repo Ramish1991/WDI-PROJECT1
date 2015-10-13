@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-$(function (){
-	$(".box").on("click", function(){
+	$(function (){
+		$(".box").on("click", function(){
 
-		var boxWhichWasClicked = $( this );
+		var boxWhichWasClicked = $(this);
 		console.log(boxWhichWasClicked.attr("id") + ' works!');
 
 
@@ -11,25 +11,24 @@ $(function (){
 		// boxWhichWasClicked.addClass("noColour");
 		// boxWhichWasClicked.removeClass("noColour");
 
-	// $(boxWhichWasClicked).css("background-color", "red");
-	// p.show(1500);
-	$(boxWhichWasClicked).css("background-color", "red");
+	  // $(boxWhichWasClicked).css("background-color", "red");
+	  // p.show(1500);
+	  $(boxWhichWasClicked).css("background-color", "red");
 
-	boxWhichWasClicked.delay(100).queue(function() {
+	   boxWhichWasClicked.delay(100).queue(function() {
 		$(boxWhichWasClicked).css("background-color", "white");
-	  });
-
 	});
-})
 
+});
+	})
 
-$(function hideAllBoxes() {
+	$(function hideAllBoxes() {
 
-	var allBoxes = $(".box");
+		var allBoxes = $(".box");
 
-	for (var i = allBoxes.length - 1; i >= 0; i--) {
+		for (var i = allBoxes.length - 1; i >= 0; i--) {
 
-		var box = allBoxes[i];
+			var box = allBoxes[i];
 
 		// var p = $(box).css("background-color", "yellow");
 		// p.hide;
