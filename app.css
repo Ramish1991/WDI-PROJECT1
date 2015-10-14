@@ -14,9 +14,11 @@ table {
 }
 
 img {
-	width: 400px;
-	height: 250px;
+	width: 300px;
+	height: 200px;
 	position: centered;
+	border-width: 5px;
+	border-color: black;
 	
 }
 
@@ -40,6 +42,13 @@ img {
 	background-color: yellow;
 }
 
+p {
+	text-align: center;
+	border-style: solid;
+	border-width: 5px;
+	border-color: blue;
+
+}
 html { 
   background: url(http://cdn.playbuzz.com/cdn/88a93817-ce03-4714-9f20-41c8b6d928a2/bd4593ee-576b-48cc-86e2-a53cc6b8d15c.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -48,3 +57,6 @@ html {
   background-size: cover;
 }
 
+body {
+	display: center;
+}
