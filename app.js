@@ -46,6 +46,12 @@ function resetBoard() {
 	}
 	if (round === 6){
 		alert("Game Over");
+		
+		if (playerOneScore > playerTwoScore){
+			alert ("Player 1 won!") 
+		}  else {
+			alert ("Player 2 won!")
+		}
 	}
 
 	round++
@@ -64,14 +70,16 @@ console.log(currentPlayer)
 
 					if (currentPlayer === 1){
 						playerOneScore++
+						alert("Player 1 scored " + playerOneScore)
 					} else {
 						playerTwoScore++
+						alert("Player 2 scored " + playerTwoScore)
 					}
 					playerOneScoreElement.text("Player 1 Score = " + playerOneScore)
 					playerTwoScoreElement.text("Player 2 Score = " + playerTwoScore)
 					
 					resetBoard();
-					console.log(playerOneScore, playerTwoScore)
+					console.log("playerOneScore", "playerTwoScore")
 				},
 				2000
 			)

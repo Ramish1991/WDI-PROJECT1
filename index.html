@@ -3,36 +3,46 @@
 
 <head>
 	<title>Simon Says</title>
-<!-- 	<meta charset="utf-8"> -->
+	<!-- 	<meta charset="utf-8"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="./app.js"></script>
 	<link rel="stylesheet" type="text/css" href="./app.css">
 </head>
 
 <body>
-	<img id="logo" src="./Logo.jpg" alt="Simon Says"/>
+	<div class="imageContainer">
+		<img id="logo" src="./Logo.jpg" alt="Simon Says"/>
+	</div>
+
+	<div class="tableContainer">
 	<table>
-	 <tbody>
+		<tbody>
 
-		<tr>
-			<td></td>
-			<td></td>
-			<br>
-			<td></td>
-			<td></td>
-		</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<br>
+				<td></td>
+				<td></td>
+			</tr>
 
-		<tr>
-			<td></td>
-			<td></td>
-			<br>
-			<td></td>
-			<td></td>
-		</tr>
-		<p class="score player1">Player 1 Score = 0</p>
-		<p class="score player2">Player 2 Score = 0</p>
-	 </tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<br>
+				<td></td>
+				<td></td>
+			</tr>
+
+		</tbody>
 	</table>
-</body>
+	</div>
 
+	<div class="textContainer">
+			<p class="score player1">Player 1 Score = 0</p>
+			<p class="score player2">Player 2 Score = 0</p>
+		
+	</div>
+
+</body>
 </html>
