@@ -14,9 +14,9 @@ table {
 }
 
 img {
-	width: 300px;
-	height: 200px;
-	position: centered;
+	width: 500px;
+	height: 300px;
+/*	position: centered;*/
 	border-width: 5px;
 	border-color: black;
 	
