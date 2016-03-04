@@ -1,24 +1,206 @@
+#player-txt-container {
+	margin-top: 80px;
+}
+
+
+#lower-bg {
+	width: 1200px;
+	height: 500px;
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 40px;
+	z-index: -10;
+}
+
+#logo-container {
+	position: relative;
+	margin-left: 100px;
+}
+
+#logo-gif {
+	width: 10%;
+	height: 200px;
+	margin-left: 220px;
+	margin-top: 20px;
+}
+
+#logo-txt {
+	font-family: godfatherimport;
+	font-size: 100px;
+	color: white;
+	margin-left: 250px;
+	margin-top: 20px;
+}
+
+#p1-bg {
+	position: absolute;
+	margin-top: 25px;
+	left: 60px;
+	width: 300px;
+	height: 100px;
+	z-index: -2;
+	border-radius: 3px;
+}
+
+#cell-1-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 2px;
+	margin-top: 34px;
+}
+
+#cell-2-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 105px;
+	margin-top: 34px;
+}
+
+
+#cell-3-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 208px;
+	margin-top: 34px;
+}
+
+#cell-4-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 312px;
+	margin-top: 34px;
+}
+
+
+#cell-5-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 2px;
+	margin-top: 136px;
+}
+
+
+#cell-6-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 105px;
+	margin-top: 136px;
+}
+
+#cell-7-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 208px;
+	margin-top: 136px;
+}
+
+#cell-8-bg {
+	position: absolute;
+	height: 100px;
+	margin-left: 312px;
+	margin-top: 136px;
+}
+
+/*@font-face {
+	font-family: "sunshineimport";
+	src: url("./Sunshine.ttf") format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}*/
+
+@font-face {
+	font-family: "trashcoimport";
+	src: url("./trashco/trashco.ttf") format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+
+@font-face {
+	font-family: "deathrattleimport";
+	src: url("./deathrattle-bb/deathrattlebb_reg.ttf") format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+
+@font-face {
+	font-family: "unseenimport";
+	src: url("./Fonts/the-unseen/unseen.ttf") format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+
+@font-face {
+	font-family: "godfatherimport";
+	src: url("./Fonts/the-godfather/TheGodfather-v2.ttf") format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+
+@font-face {
+	font-family: "grungeimport";
+	src: url("./Fonts/Railway-to-Hells.ttf") format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+
+@font-face {
+	font-family: "dystopianimport";
+	src: url("./Fonts/Dystopian-Future.ttf") format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+
+#player1txt {
+	font-family: dystopianimport;
+	color: white;
+	font-size: 40px;
+	width: 300px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+#player2txt {
+	font-family: dystopianimport;
+	color: red;
+	font-size: 40px;
+	float: right;
+	margin-right: 100px;
+	margin-top: 50px;
+	/*font-weight: bold;*/
+}
+
+#gif {
+	position: absolute;
+	z-index: -1;
+	width: 400px;
+	height: 250px;
+
+}
+
 td {
 	height: 100px;
 	width: 100px;
-	border-color: black;
+	border-color: white;
 	border-width: 1px;
 	border: solid;
 }
 
 table {
-	border-color: black;
+	border-color: white;
 	border-width: 1px;
 	border: solid;
+	position: absolute;
+	z-index: 1;
 
 }
 
-img {
-	width: 500px;
-	height: 300px;
-/*	position: centered;*/
-	border-width: 5px;
-	border-color: black;
+#logo {
+	width: 200px;
+	height: 200px;
+	/*margin-left: 350px;*/
+	position: absolute;
+	z-index: -10;
 	
 }
 
@@ -53,19 +235,21 @@ p {
 }
 
 html { 
-  background: url(http://cdn.playbuzz.com/cdn/88a93817-ce03-4714-9f20-41c8b6d928a2/bd4593ee-576b-48cc-86e2-a53cc6b8d15c.jpg) no-repeat center center fixed; 
+  /*background-color: #003459;*/
+  background-color: black;
+  /*background-image: url('./10.jpg');*/
+  /*background-size: 500px;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.imageContainer {
-	margin: 0 auto;
-	width: 300px;
-}
-
 .tableContainer {
 	margin: 0 auto;
-	width: 450px;
+	/*width: 450px;*/
+	margin-top: 150px;
+	position: relative;
+	color: white !important;
+	margin-left: 400px;
 }
