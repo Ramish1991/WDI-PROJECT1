@@ -17,26 +17,30 @@
 
 
 <body>
+
+
+
 	<!-- LOGO -->
-	<div id="logo-container" style="clear: both">
-		<!-- <img id="logo" src="./Images/Gangster2.png"/> -->
-		<img id="logo" src="./Images/mobster.png"/>
-		<h2 id="logo-txt">BECAUSE SIMON SAYS</h2>
-	</div>
-	<!-- PLAYER'S SCOREBOARD TEXT -->
-	<div id="player-txt-container" style="clear: both">
-		<!-- P1 -->
-		<div id="player1box">
-			<h2 id="player1txt">PLAYER 1</h2>
-			<!-- <img id='p1-bg' src="./giphy.gif" > -->
-		</div>
-	
-		<!-- P2 -->
-		<h2 id="player2txt">PLAYER 2</h2>
+	<div id="logo-DIV" style="clear: both">
+		<img id="logo-img" src="./Images/mobster.png"/>	<!-- LOGO IMG -->
+		<h2 id="logo-txt">BECAUSE SIMON SAYS</h2>	<!-- LOGO TXT -->
 	</div>
 
-	<!-- TABLE -->
-	<img id="lower-bg" src="./Images/gangster_night.jpg">
+	<!-- BACKGROUND -->
+	<div id="background-DIV" >
+		<img id="street-background" src="./Images/gangster_night.jpg">
+	</div>
+
+	<!-- PLAYER'S SCOREBOARD TEXT -->
+	<h2 id="player1txt">PLAYER 1</h2>	<!-- PLAYER NUMBER -->
+	<h3 class="score player1">0</h3> <!-- INITIAL SCORE -->
+	<h2 id="player2txt">PLAYER 2</h2>
+	<h3 class="score player2">0</h3>
+
+
+
+	
+
 	<div class="tableContainer" style="clear: both">
 		<img id="cell-1-bg" src="./Images/vault.gif">
 		<img id="cell-2-bg" src="./Images/vault.gif">
@@ -46,34 +50,28 @@
 		<img id="cell-6-bg" src="./Images/vault.gif">
 		<img id="cell-7-bg" src="./Images/vault.gif">
 		<img id="cell-8-bg" src="./Images/vault.gif">
-	<table>
-		<tbody>
+		<table>
+			<tbody>
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+			</tbody>
+		</table>
 
-			<tr>
-				<td></td>
-				<td></td>
-				<br>
-				<td></td>
-				<td></td>
-			</tr>
-
-			<tr>
-				<td></td>
-				<td></td>
-				<br>
-				<td></td>
-				<td></td>
-			</tr>
-
-		</tbody>
-	</table>
+		<button type="button" id="begin-btn">BEGIN</button>
 	</div>
-
-<!-- 	<div class="textContainer">
-			<p class="score player1">Player 1 Score = 0</p>
-			<p class="score player2">Player 2 Score = 0</p>
-		
-	</div> -->
 
 </body>
 </html>
