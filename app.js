@@ -4,7 +4,6 @@ $(document).ready(function() {
 	var playerTwoScore = 0
 
 	var currentPlayer = 1 
-	var round = 1
 
 	var playerOneScoreElement = $('.score.player1')
 	var playerTwoScoreElement = $('.score.player2') 
@@ -26,43 +25,25 @@ $(document).ready(function() {
 
  			currentCell.addClass("selected")
  		}, i * 1000);
+ 		}
+ 		setTimeout(function(){
+ 			$("td.selected").removeClass("selected")
+ 		}, i * 1000)
  	}
- 	setTimeout(function(){
- 		$("td.selected").removeClass("selected")
- 	}, i * 1000)
- }
 
-// START BUTTON IS SWITCHED TO RESET BUTTON
- document.getElementById('begin-btn').onclick = function() {
- 	pickCells();
- 	$('#begin-btn').attr('id', 'reset-btn')
- 	document.getElementById('reset-btn').onclick = function() {
- 		resetBoard();
- 	}
- }
+	// START BUTTON IS SWITCHED TO RESET BUTTON
+	document.getElementById('begin-btn').onclick = function() {
 
- function resetBoard() {
- 	$("td").removeClass("selected cell1 cell2 cell3 cell4");
- 	userSelect = 1
-	pickCells(); // pick new cells
-	// change player
-	if (currentPlayer === 1) {
-		currentPlayer = 2
-	} else  {
-		currentPlayer = 1					
-	}
-	if (round === 6){
-		alert("Game Over");
-		
-		if (playerOneScore > playerTwoScore){
-			alert ("Player 1 won!") 
-		}  else {
-			alert ("Player 2 won!")
+		pickCells(); // 1
+
+		$('#begin-btn').attr('id', 'reset-btn') // 2 
+
+		document.getElementById('reset-btn').onclick = function() {  // 3
+			resetBoard();
+			playerOneScoreElement.text("0")
+			playerTwoScoreElement.text("0")
 		}
 	}
-
-	round++
-}
 
 var userSelect = 1;
 
@@ -96,10 +77,34 @@ $("td").on("click", function(){
 		cell.addClass("selected")
 	} else {
 		alert("You lost!")
-		resetBoard();
+		resetBoard(); // Pass turn to next player
 	}
 
 });
 
+function resetBoard() {
+	var round = 1
+	console.log('resetBoard execetued')
+	$("td").removeClass("selected cell1 cell2 cell3 cell4");
+	userSelect = 1
+	pickCells(); // pick new cells
+	// change player
+	if (currentPlayer === 1) {
+		currentPlayer = 2
+	} else  {
+		currentPlayer = 1					
+	}
+	if (round === 6){
+		alert("Game Over");
+		
+		if (playerOneScore > playerTwoScore){
+			alert ("Player 1 won!") 
+		}  else if (playerOneScore < playerTwoScore) {
+			alert ("Player 2 won!")
+		} else { alert ("It's a Tie") }
+	}
+
+	round++
+}
 
 });
