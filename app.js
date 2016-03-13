@@ -8,6 +8,8 @@ $(document).ready(function() {
 	var playerOneScoreElement = $('.score.player1')
 	var playerTwoScoreElement = $('.score.player2') 
 
+	var round = 1
+
 	function pickCells() {
 
 		var counter = 1
@@ -34,11 +36,11 @@ $(document).ready(function() {
 	// START BUTTON IS SWITCHED TO RESET BUTTON
 	document.getElementById('begin-btn').onclick = function() {
 
-		pickCells(); // 1
+		pickCells();
 
-		$('#begin-btn').attr('id', 'reset-btn') // 2 
-
-		document.getElementById('reset-btn').onclick = function() {  // 3
+		$('#begin-btn').attr('id', 'reset-btn') 
+		document.getElementById('reset-btn').innerHTML = 'RESET'
+		document.getElementById('reset-btn').onclick = function() {  
 			resetBoard();
 			playerOneScoreElement.text("0")
 			playerTwoScoreElement.text("0")
@@ -76,35 +78,48 @@ $("td").on("click", function(){
 		userSelect++
 		cell.addClass("selected")
 	} else {
-		alert("You lost!")
-		resetBoard(); // Pass turn to next player
+		document.getElementById('errors').innerHTML = currentPlayer + "You Lost"
+		setTimeout( function() {
+			resetBoard();
+		}, 2000)
+		 // Pass turn to next player
 	}
 
 });
 
 function resetBoard() {
-	var round = 1
+	document.getElementById('errors').innerHTML = "Board Reset"
+	// var round = 1
 	console.log('resetBoard execetued')
 	$("td").removeClass("selected cell1 cell2 cell3 cell4");
 	userSelect = 1
 	pickCells(); // pick new cells
 	// change player
 	if (currentPlayer === 1) {
+		document.getElementById('errors').innerHTML = "PLAYER 2"
 		currentPlayer = 2
+
 	} else  {
+		document.getElementById('errors').innerHTML = "PLAYER 1"
 		currentPlayer = 1					
 	}
 	if (round === 6){
+		round = 0
 		alert("Game Over");
 		
 		if (playerOneScore > playerTwoScore){
 			alert ("Player 1 won!") 
 		}  else if (playerOneScore < playerTwoScore) {
 			alert ("Player 2 won!")
-		} else { alert ("It's a Tie") }
+		} else { alert ("It's a Tie") 
 	}
+	setTimeout( function(){
+		playerOneScoreElement.text("0")
+		playerTwoScoreElement.text("0")
+	}, 0 )
 
-	round++
+	}
+		round++
 }
 
 });
