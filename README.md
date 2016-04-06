@@ -1,6 +1,6 @@
 ### CheckOut the Website at: 
 
-[http://rocky-citadel-8899.herokuapp.com/](https://www.google.com)
+[rocky-citadel-8899.herokuapp.com/](https://www.google.com)
 <br>
 <br>
 
